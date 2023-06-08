@@ -2,12 +2,27 @@
 <html>
 <head>
     <title>Lançamentos de Filmes</title>
-    <!-- Inclua os estilos CSS necessários -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.3.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="lançamentosCSS.css">
     <style></style>
 </head>
 <body>
     <h1>Proximos lançamentos</h1>
+
+
+
+    <div class="menu-container">
+        <div class="menu-button" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+            <span class="menu-label"></span>
+            <div class="menu-dropdown" id="menuDropdown">
+                <button onclick="handleMenuItemClick('inicio')">Início</button>
+                <button onclick="handleMenuItemClick('lançamentos')" id="lançamentosButton">Lançamentos</button>
+            </div>            
+        </div>
+    </div>
 
     <div id="filmes-container">
         <!-- Aqui você pode adicionar os elementos HTML para exibir os filmes de lançamento -->
@@ -64,7 +79,7 @@
                 <p>29 de junho de 2023 / No cinema / 2h 34min / Ação, Aventura</p>
             </div>
             <div class="back">
-                <p>Em Indiana Jones e a Relíquia do Destino, Indiana Jones (Harrisson Ford), famoso arqueólogo aventureiro, embarca em mais uma missão inesperada. Neste retorno do herói lendário, Indiana Jones, na quinta parcela da icônica série de filmes, encontra-se em uma nova era, aproximando-se da aposentadoria. Ele luta para se encaixar em um mundo que parece tê-lo superado. Mas quando as garras de um mal muito familiar retornam na forma de um antigo rival, Indiana Jones deve colocar seu chapéu e pegar seu chicote mais uma vez para garantir que um antigo e poderoso artefato não caia nas mãos erradas.</p>
+                <p>Em Indiana Jones e a Relíquia do Destino, Indiana Jones (Harrisson Ford), famoso arqueólogo aventureiro, embarca em mais uma missão inesperada. Neste retorno do herói lendário, Indiana Jones, na quinta parcela da icônica série de filmes, encontra-se em uma nova era, aproximando-se da aposentadoria. Ele luta para se encaixar em um mundo que parece tê-lo superado. Mas quando as garras de um mal muito familiar retornam na forma de um antigo rival, Indiana Jones deve colocar seu chapéu e pegar seu chicote mais uma vez para garantir que um antigo e poderoso artefato não caia nas mãos erradas.  </p>
             </div>
         </div>
 
