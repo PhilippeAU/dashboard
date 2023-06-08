@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.3.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            text-align: center;
+        }
+        .movie {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <div class="menu-button" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+            <span class="menu-label"></span>
+            <div class="menu-dropdown" id="menuDropdown">
+                <button onclick="handleMenuItemClick('inicio')">Início</button>
+                <button onclick="handleMenuItemClick('popularMovies')">Filmes Populares</button>
+                <button onclick="handleMenuItemClick('lançamentos')" id="lançamentosButton">Lançamentos</button>
+                <button onclick="handleMenuItemClick('sugestões')" id="suggestionsButton">Sugestões</button>
+            </div>            
+        </div>
+    </div>
+    
+    <h1>Tudo sobre filmes</h1>
+    
+    <div id="genreOptions" class="hidden">
+        <h2>Escolha seu gênero favorito:</h2>
+        <select id="genreSelect">
+            <option value="">Selecione</option>
+            <option value="28">action</option>
+            <option value="35">Comédia</option>
+            <option value="18">drama</option>
+            <option value="27">Terror</option>
+            <option value="horror">Romace</option>
+            <option value="horror">Musical</option>
+            <option value="horror">Animação</option>
+        
+        </select>
+        <button id="submitGenreBtn" onclick="submitGenre()">Mostrar Filmes</button>
+        
+    </div>
+
+    
+    <div class="container">
+        <div class="chart-container chart-container-wide">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="//plotly.com/~PhilippeAU/18.embed"></iframe>
+        </div>
+        <div class="chart-container chart-container-wide">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="//plotly.com/~PhilippeAU/5.embed"></iframe>
+        </div>
+        <div class="chart-container chart-container-wide">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="//plotly.com/~PhilippeAU/10.embed"></iframe>
+        </div>
+        <div class="chart-container chart-container-wide">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="//plotly.com/~PhilippeAU/28.embed"></iframe>
+        </div>
+        <div class="chart-container chart-container-wide">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="//plotly.com/~PhilippeAU/10.embed"></iframe>
+        </div>
+        <div class="chart-container chart-container-wide">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="//plotly.com/~PhilippeAU/16.embed"></iframe>
+        </div>
+        <div class="chart-container chart-container-wide">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="//plotly.com/~PhilippeAU/12.embed"></iframe>
+        </div>
+        <div class="chart-container9 chart-container-wide">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="//plotly.com/~PhilippeAU/3.embed"></iframe>
+        </div>
+    </div>
+
+    <div id="filmesContainer"></div>
+    <div id="moviesList"></div>
+
+    
+    <script src="script.js">
+
+        
+    </script>
+
+</body>
+</html>

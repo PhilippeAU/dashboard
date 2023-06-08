@@ -1,0 +1,261 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #131314, #131314);
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.chart-container {
+    width: 50%;
+    height: 0;
+    padding-bottom: 37%; /* Ajuste esse valor conforme necessário */
+    background-color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.chart-container-wide {
+    grid-column: 1 / span 2;
+}
+
+.chart-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.chart-container3{
+    width: 205%;
+    height: 0;
+    padding-bottom: 75%; /* Ajuste esse valor conforme necessário */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+
+}
+
+.chart-container3 iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.chart-container9 {
+    width: 100%; /* Ajuste a largura conforme necessário */
+    height: 0;
+    padding-bottom: 40.25%; /* Proporção para manter a relação de aspecto 16:9 */
+    background-color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.chart-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.chart-container9 iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.chart-wrapper {
+    display: none;
+}
+
+/* Estilos específicos para cada gráfico */
+#chart1 {
+    order: 1;
+}
+
+#chart2 {
+    order: 2;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+}
+
+#divGenerosPreferidos {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    font-family: "Arial Black", sans-serif;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 48px;
+    font-family: "Arial Black", sans-serif;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+.suggestions {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.suggestions:active {
+    transform: translateY(2px);
+}
+
+#genreOptions {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#genreOptions h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#genreSelect {
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#genreOptions button {
+    padding: 8px 20px;
+    font-size: 18px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#genreOptions button:hover {
+    background-color: #342f2f;
+}
+
+#genreOptions button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+
+.menu-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.menu-button i {
+    color: #000000;
+    font-size: 24px;
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.menu-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-dropdown button:hover {
+    background-color: #f5f5f5;
+}
+
+#filmesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    
+  }
+  
+  .filme {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .filme h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .filme p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
